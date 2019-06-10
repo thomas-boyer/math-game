@@ -30,12 +30,12 @@ class MathGame
   attr_accessor :player1, :player2
 
   def play_turn player
+    puts "\n----- NEW TURN -----"
     turn = Turn.new player
     correct_answer = turn.play
     if (!correct_answer)
       player.lives -= 1
     end
-    puts "\n----- NEW TURN -----"
   end
 
   def play
